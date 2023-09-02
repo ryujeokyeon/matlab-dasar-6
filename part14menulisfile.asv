@@ -1,0 +1,17 @@
+clear
+clc
+
+%% siapkan data untuk ditulis excel
+x = 1:10;
+y = x.^2;
+Data = [x' y']
+
+
+%% Menulis ke excel
+filename = 'datakuadrat.xlsx';
+A = Data;
+sheet = 'kuadrat';
+
+
+
+xlswrite(filename,A,sheet,xlrange);
